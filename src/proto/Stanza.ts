@@ -353,7 +353,16 @@ export const buildWapNode = (e: any) => {
 };
 
 export const encodeStanza = (e) => {
-    console.log('will send to server', e);
+    
+    console.log('tt:', e.content?.[0]?.['tag'])
+
+    if(e.content?.[0]?.['tag'] == 'ping') {
+        console.log("will send [omitting ping log]")
+    } else {
+        console.log('will send to server', e);
+    }
+
+
     const node = e instanceof WapNode ? e : buildWapNode(e);
 
     const data = new Binary();

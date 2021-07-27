@@ -33,6 +33,9 @@ import { generatePayloadLogin } from './payloads/LoginPayload';
 import { storageService } from './services/StorageService';
 import { hmacSha256 } from './utils/HKDF';
 import { createSignalAddress, getOrGenPreKeys, putIdentity, toSignalCurvePubKey, markKeyAsUploaded, putServerHasPreKeys, getServerHasPreKeys } from './signal/Signal';
+
+import { printWholeStanza } from './utils/Printer'
+
 (async () => {
     storageService.init('./storage.json');
 
@@ -449,8 +452,9 @@ import { createSignalAddress, getOrGenPreKeys, putIdentity, toSignalCurvePubKey,
             const data = await unpackStanza(e);
             const stanza = decodeStanza(data);
 
+            printWholeStanza(stanza)
+
             await handleStanza(stanza);
-            console.log(stanza);
         });
     };
 })();
