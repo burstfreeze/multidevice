@@ -4,7 +4,6 @@ import {
     randomBytes,
     areBuffersEqual,
     intToBytes,
-    VERSION_ENCODED,
     HEADER,
     CERT_ISSUER,
     BIG_ENDIAN_CONTENT,

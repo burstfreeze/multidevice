@@ -10,13 +10,13 @@ export const generatePayloadRegister = (
   const appVersionBuf = new Uint8Array(Buffer.from(VERSION_ENCODED, "base64"));
 
   const companion = {
-    os: "Windows",
+    os: "Mac OS",
     version: {
-      primary: 10,
-      secondary: undefined,
-      tertiary: undefined,
+      primary: 11,
+      secondary: 0,
+      tertiary: 0,
     },
-    platformType: 1,
+    platformType: 7,
     requireFullSync: false,
   };
 
@@ -40,7 +40,7 @@ export const generatePayloadRegister = (
       appVersion: {
         primary: 2,
         secondary: 2126,
-        tertiary: 14,
+        tertiary: 15,
       },
       platform: 14,
       releaseChannel: 0,
@@ -54,9 +54,11 @@ export const generatePayloadRegister = (
       localeCountryIso31661Alpha2: "en",
     },
     webInfo: {
-      webSubPlatform: 0,
+      webSubPlatform: 3,
     },
   };
+
+  console.log(registerPayload)
  
   return WAProto.ClientPayload.encode(registerPayload).finish();
 };

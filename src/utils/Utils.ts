@@ -20,8 +20,10 @@ export const USER_JID_FB_SUFFIX = "msgr";
 
 export const HEADER = new Uint8Array([87, 65, 5, DICT_VERSION]);
 
-export const VERSION = "2.2126.12";
-export const VERSION_ENCODED = "S9Kdc4pc4EJryo21snc5cg==";
+export const VERSION = "2.2126.15";
+//export const VERSION_ENCODED_OLD = "S9Kdc4pc4EJryo21snc5cg==";
+export const VERSION_ENCODED = "HM+Ewoj3MWewu1J2qExF3A=="
+//export const VERSION_B64_ENCODED = [28, 207, 132, 194, 136, 247, 49, 103, 176, 187, 82, 118, 168, 76, 69, 220];
 
 export const CERT_ISSUER = "WhatsAppLongTerm1";
 

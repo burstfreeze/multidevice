@@ -10,9 +10,9 @@ export const generatePayloadLogin = (user: WapJid) => {
       appVersion: {
         primary: 2,
         secondary: 2126,
-        tertiary: 14,
+        tertiary: 15,
       },
-      platform: 14,
+      platform: 15,
       releaseChannel: 0,
       mcc: "000",
       mnc: "000",
